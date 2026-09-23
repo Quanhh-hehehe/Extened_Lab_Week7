@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang Web Đầu Tiên Của Tôi</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header class="header-container">
+      <h1 id="main-header">Final Project</h1>
+      <nav class="navigation">
+        <ul>
+          <li><a href="#home">Trang chủ</a></li>
+          <li><a href="#about">Giới thiệu</a></li>
+          <li><a href="#skills">Tổng kết</a></li>
+          <li><a href="#lab2">Box Model</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main-content">
+      <!-- PHẦN HÌNH ẢNH VÀ LINK -->
+      <section id="about" class="intro-section">
+        <h2>Welcome to My Website</h2>
+        <div>Đây là góc bàn học yêu thích</div>
+        <!-- Chèn hình ảnh -->
+        <figure class="image-container">
+          <img
+            src="https://noithatmanhhe.vn/media/27095/44-ban-hoc-trong-phong-ngu.jpg"
+            alt="Không gian làm việc mơ ước"
+            class="responsive-image"
+          />
+          <figcaption>Không gian làm việc mơ ước</figcaption>
+        </figure>
+
+        <!-- Chèn link -->
+        <p>
+          Tôi đang trong quá trình học tập cách xây dựng website. Bạn có thể tìm
+          hiểu thêm về HTML tại
+          <a
+            href="https://developer.mozilla.org/vi/docs/Learn/HTML"
+            target="_blank"
+            class="external-link"
+            >tài liệu của MDN Web Docs</a
+          >.
+        </p>
+      </section>
+
+      <!-- PHẦN BẢNG (TABLE) -->
+      <section id="skills" class="table-section">
+        <p class="style1">Mô tả về không gian làm việc</p>
+        <h2>Danh sách Kỹ năng</h2>
+        <p class="highlight">Dưới đây là lộ trình học tập hiện tại của tôi:</p>
+
+        <table class="data-table">
+          <!-- Tiêu đề bảng -->
+          <thead>
+            <tr>
+              <th>STT</th>
+              <th>Ngôn ngữ / Công nghệ</th>
+              <th>Mức độ</th>
+            </tr>
+          </thead>
+          <!-- Nội dung bảng -->
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>HTML</td>
+              <td>Đã nắm cơ bản</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>CSS</td>
+              <td>Đang luyện tập</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>JavaScript</td>
+              <td>Sẽ học tiếp theo</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- PHẦN LAB 2: THẺ DỮ LIỆU (BOX MODEL) -->
+      <section id="lab2" class="cards-section">
+        <h2>Khám phá Box Model</h2>
+        <div class="cards-container">
+          <!-- Thẻ 1: Sẽ dùng Box Model mặc định -->
+          <div class="data-card card-default">
+            <h3>Pipeline Python</h3>
+            <p>Thẻ này sử dụng box-sizing mặc định (content-box).</p>
+          </div>
+
+          <!-- Thẻ 2: Sẽ áp dụng border-box -->
+          <div class="data-card card-borderbox">
+            <h3>Truy vấn T-SQL</h3>
+            <p>Thẻ này đã được bật box-sizing: border-box.</p>
+          </div>
+
+          <!-- Thẻ 3: Dành cho việc tự tính toán -->
+          <div class="data-card card-calculate">
+            <h3>Kiến trúc AWS</h3>
+            <p>
+              Thẻ dùng để tính toán thủ công tổng chiều rộng trong DevTools.
+            </p>
+          </div>
+        </div>
+      </section>
+      <div class="dashboard">
+        <div class="card">
+          <h3>product 1</h3>
+          <p></p>
+        </div>
+
+        <div class="card">
+          <h3>product 2</h3>
+          <p></p>
+        </div>
+
+        <div class="card">
+          <h3>product 3</h3>
+          <p></p>
+        </div>
+
+        <div class="card">
+          <h3>product 4</h3>
+          <p></p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer-container">
+      <p>&copy; 2026. Xây dựng bằng HTML cơ bản.</p>
+    </footer>
+
+    <script src="app.js"></script>
+
+    <!-- PHẦN FORM CHO LAB 2 (DOM + Events) -->
+    <section class="form-section">
+      <h2>Định giá nhà (Lab 2)</h2>
+
+      <form id="house-price-form">
+        <div>
+          <label for="address">Địa chỉ nhà (*):</label>
+          <input type="text" id="address" name="address" />
+        </div>
+
+        <br />
+
+        <div>
+          <label for="bedrooms">Số phòng ngủ (*):</label>
+          <input type="number" id="bedrooms" name="bedrooms" />
+        </div>
+
+        <br />
+
+        <button type="submit">Xác nhận</button>
+
+        <!-- Đây là thẻ div dùng để chứa các thông báo lỗi/thành công -->
+        <div id="message-container"></div>
+
+        <table border="1">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Username</th>
+              <th>Email</th>
+              <th>Address</th>
+            </tr>
+          </thead>
+          <tbody id="user-table-body"></tbody>
+        </table>
+      </form>
+    </section>
+
+    <section class="post-section">
+      <h2>Danh sách bài viết mới</h2>
+      <div id="post-container"></div>
+    </section>
+
+    <!-- PHẦN LAB 3: TÍCH HỢP DATA.JSON -->
+    <section class="ml-section">
+      <h2>Kết quả dự đoán từ Mô hình ML (Lab 3)</h2>
+      <!-- Sử dụng lại class cards-container đã có trong index.css để giao diện đồng bộ -->
+      <div id="ml-predictions-container" class="cards-container"></div>
+    </section>
+
+    <section
+      class="fastapi-integration-section"
+      style="padding: 20px; margin-top: 20px; border: 2px dashed #646cff"
+    >
+      <h2>Danh sách Items từ API FastAPI (Lab 3)</h2>
+      <!-- Thẻ pre giúp hiển thị cấu trúc JSON cho đẹp và dễ đọc -->
+      <pre
+        id="fastapi-result"
+        style="
+          background: #f9f9f9;
+          padding: 15px;
+          border-radius: 8px;
+          overflow-x: auto;
+        "
+      >
+Đang kết nối tới Backend...</pre
+      >
+    </section>
+
+    <script>
+      fetch("http://127.0.0.1:8000/items")
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Mạng bị lỗi hoặc Backend chưa bật");
+          }
+          return response.json();
+        })
+        .then((data) => {
+          // Ghi dữ liệu lấy được từ FastAPI vào thẻ có id="fastapi-result"
+          document.getElementById("fastapi-result").innerText = JSON.stringify(
+            data,
+            null,
+            2,
+          );
+        })
+        .catch((error) => {
+          // Hiển thị thông báo nếu không kết nối được
+          document.getElementById("fastapi-result").innerText =
+            "Lỗi kết nối tới Backend: " +
+            error.message +
+            "\n\n(Hãy chắc chắn rằng bạn đã chạy lệnh: uvicorn main:app --reload)";
+          console.error("Lỗi:", error);
+        });
+    </script>
+    <!-- ========================================================= -->
+  </body>
+</html>
